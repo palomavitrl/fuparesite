@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Página</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        // Verifica no localStorage se o modo escuro estava ativo
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            // Se sim, adiciona a classe 'dark-mode' na tag <html> ANTES da página carregar
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body class="app-background">
+    <div class="app-container">
+        <h1 class="page-title">Dados</h1>
+        <form id="dataForm">
+            <div class="input-group">
+                <label for="cigarros-dia">Quantos cigarros você fumava por dia?</label>
+                <input type="number" id="cigarros-dia" placeholder="Resposta" required>
+            </div>
+            <div class="input-group">
+                <label for="preco-maco">Quanto custa um maço de cigarro?</label>
+                <input type="text" id="preco-maco" inputmode="decimal" placeholder="Ex: 8.50" required>
+            </div>
+            <div class="input-group">
+                <label for="cigarros-maco">Quantos cigarros vêm em um maço?</label>
+                <input type="number" id="cigarros-maco" placeholder="Resposta" required>
+            </div>
+            <div class="input-group">
+                <label for="dias-sem-fumar">Está há quantos dias sem fumar?</label>
+                <input type="number" id="dias-sem-fumar" placeholder="Ex: 0, 7, 30..." required>
+            </div>
+            <button type="submit" class="btn-save">Salvar e Ver Progresso</button>
+            <div id="feedback-container"></div>
+        </form>
+    </div>
+    <script src="dados.js" defer></script>
+</body>
+</html>

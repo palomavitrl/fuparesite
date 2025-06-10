@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Página</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        // Verifica no localStorage se o modo escuro estava ativo
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            // Se sim, adiciona a classe 'dark-mode' na tag <html> ANTES da página carregar
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="welcome-section">
+           
+            <h1>Bem vindo</h1>
+            <img src="C:\Users\amola\OneDrive\Documentos\fuparesite\Gemini_Generated_Image_i3oigdi3oigdi3oi.png" alt="Logo do Fupare" class="logo">
+            
+            <p>Este é um aplicativo para ajudar fumantes a parar de fumar.</p>
+            <p>Estamos aqui para fornecer apoio e orientação ao longo do processo.</p>
+        </div>
+        <div class="login-section">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" required>
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" required>
+                <button type="submit" class="btn-primary">ENTRAR</button>
+                <a href="recuperar-senha.html" class="forgot-password">ESQUECI A SENHA</a>
+                <a href="cadastro.html" class="create-account">CRIAR CONTA</a>
+            </form>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,979 @@
+/* --- ESTILOS GERAIS E FONTES --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+:root {
+    --primary-blue: #2A65C8;
+    --light-green: #90EE90;
+    --dark-text: #333;
+    --light-text: #666;
+    --background-gray: #F4F6FA;
+    --background-teal: #46B5A7;
+    --white: #FFFFFF;
+    --border-color: #E0E0E0;
+}
+
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    color: var(--dark-text);
+    background-color: var(--white);
+}
+
+/* --- PÁGINA DE LOGIN E RECUPERAÇÃO --- */
+.login-container, .recovery-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.welcome-section {
+    padding: 60px;
+    max-width: 400px;
+}
+
+.welcome-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    font-size: 1.1rem;
+    color: var(--light-text);
+    line-height: 1.6;
+}
+
+.login-section {
+    padding: 60px;
+    border-left: 1px solid var(--border-color);
+    width: 350px;
+}
+
+.login-section h2, .recovery-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+form input {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.forgot-password, .back-to-login {
+    text-align: center;
+    text-decoration: none;
+    color: var(--light-text);
+    font-weight: 500;
+}
+
+.recovery-container {
+    flex-direction: column;
+    text-align: center;
+    max-width: 450px;
+    margin: auto;
+    padding: 20px;
+}
+
+.recovery-container p {
+    color: var(--light-text);
+    margin-bottom: 30px;
+}
+
+/* --- ESTILOS DAS PÁGINAS DO APLICATIVO (Simulação de Celular) --- */
+.app-background {
+    background: var(--background-teal);
+}
+
+.app-background-light {
+    background: var(--background-gray);
+}
+
+.app-container {
+    max-width: 420px;
+    margin: auto;
+    padding: 20px;
+    min-height: 100vh;
+    box-sizing: border-box; /* Garante que padding não afete a largura total */
+}
+
+.page-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Página de Dados */
+.app-background .page-title {
+    color: var(--white);
+}
+
+.input-group label {
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+.btn-save {
+    background-color: var(--light-green);
+    color: var(--dark-text);
+    padding: 18px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Página de Progresso */
+.app-background-light .page-title {
+    color: #4A2D87; /* Roxo escuro do texto */
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+/* Substitua o CSS antigo do seu .header por este novo bloco */
+
+/* Bloco de CSS DEFINITIVO para o Cabeçalho */
+
+/* --- CSS DEFINITIVO PARA O CABEÇALHO --- */
+
+.header {
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Força os ícones para as pontas */
+}
+
+/* Garante que o título não empurre os ícones */
+.header .page-title {
+    margin: 0;
+    padding: 0 10px; /* Adiciona um respiro dos lados */
+    font-size: 1.2rem;
+    text-align: center;
+    flex-grow: 1; /* Permite que o título ocupe o espaço central */
+}
+
+/* Estilo padronizado para TODOS os ícones do cabeçalho */
+.header .header-icon {
+    /* Aparência */
+    font-size: 1.5rem;
+    color: #868e96; /* Cor cinza sutil para os ícones */
+    text-decoration: none;
+    background-color: transparent;
+    border-radius: 50%;
+    
+    /* Tamanho e Alinhamento */
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Impede que o ícone seja esmagado */
+
+    /* Efeito */
+    transition: background-color 0.2s ease;
+}
+
+.header .header-icon:hover {
+    background-color: #f1f1f1; /* Fundo suave ao passar o mouse */
+}
+
+/* Estilos para o modo escuro */
+html.dark-mode .header {
+    border-bottom-color: var(--cor-borda);
+}
+html.dark-mode .header .header-icon {
+    color: var(--cor-texto-secundario);
+}
+html.dark-mode .header .header-icon:hover {
+    background-color: var(--cor-fundo-hover);
+}
+/* Efeito ao passar o mouse */
+.header .settings-icon:hover {
+    background-color: #e9ecef;
+    color: #343a40; /* O ícone fica mais escuro ao passar o mouse */
+}
+.back-arrow {
+    font-size: 2rem;
+    color: #4A2D87;
+    text-decoration: none;
+    font-weight: bold;
+}
+.forward-arrow {
+    font-size: 2rem;
+    color: #4A2D87;
+    text-decoration: none;
+    font-weight: bold;
+}
+.app-background-light .page-title {
+    color: #4A2D87;
+    font-size: 1.8rem;
+    margin-bottom: 0; /* Removemos a margem para alinhar melhor */
+}
+.progress-card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.progress-card h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.progress-card p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    margin: 10px 0;
+    color: var(--light-text);
+}
+.progress-card p span {
+    font-weight: bold;
+    color: var(--dark-text);
+}
+
+/* Página de Conquistas */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+.achievement-card {
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.achievement-card img { /* Supondo que você use <img> para os ícones */
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+.achievement-card p {
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Página da Comunidade */
+.community-tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.tab-link {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--light-text);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+}
+.tab-link.active {
+    color: var(--primary-blue);
+    border-bottom-color: var(--primary-blue);
+}
+
+.chat-window {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 15px;
+    height: 60vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+.chat-message {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+/* Encontre este seletor e substitua o bloco todo */
+.avatar {
+    width: 44px; /* ALTERADO: Aumentamos o tamanho total (era 40px) */
+    height: 44px; /* ALTERADO: Aumentamos o tamanho total (era 40px) */
+    border-radius: 50%;
+    background-color: #E0E0E0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px; /* NOVO: Definimos um tamanho para a letra, resolvendo o "espremido" */
+    flex-shrink: 0; /* NOVO: Impede que o avatar encolha caso falte espaço */
+}
+.message-content {
+    background-color: #F1F1F1;
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 80%;
+}
+.message-content strong {
+    display: block;
+    margin-bottom: 5px;
+}
+.message-input-area {
+    display: flex;
+    gap: 10px;
+}
+.message-input-area input {
+    flex-grow: 1;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 10px 15px;
+}
+.message-input-area button {
+    padding: 10px 15px;
+    border: none;
+    background-color: var(--primary-blue);
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+/* --- ESTILO DA MENSAGEM DE FEEDBACK --- */
+.success-message {
+    background-color: #28a745; /* Verde sucesso */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: bold;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.friend-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.friend-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.friend-item:last-child {
+    border-bottom: none;
+}
+
+.friend-name {
+    flex-grow: 1;
+    margin-left: 15px;
+    font-weight: 500;
+}
+
+
+/* --- ESTILO DO BOTÃO DE ADICIONAR AMIGOS --- */
+.btn-add-friend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--primary-blue);
+    background-color: #E3F2FD; /* Um azul bem claro */
+    border: 2px dashed var(--primary-blue);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-add-friend:hover {
+    background-color: #BBDEFB; /* Um azul um pouco mais escuro ao passar o mouse */
+}
+
+.btn-add-friend i {
+    margin-right: 8px;
+}
+/* --- ESTILO DO LINK DE CRIAR CONTA --- */
+.create-account {
+    text-align: center;
+    text-decoration: none;
+    color: var(--primary-blue);
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+/* Adicione este código ao seu arquivo style.css */
+
+.welcome-section {
+    /* Adicione estas propriedades se já não existirem para centralizar o conteúdo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Garante que o texto também fique centralizado */
+}
+
+.logo {
+    width: 150px; /* Defina a largura desejada para a sua logo */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-bottom: 20px; /* Cria um espaço entre a logo e o título "Bem vindo" */
+}
+/* --- ESTILOS PARA RESPONSIVIDADE (CELULAR E TABLET) --- */
+
+@media (max-width: 768px) {
+
+    .login-container {
+        /* Empilha os itens um sobre o outro em vez de lado a lado */
+        flex-direction: column;
+        min-height: 100vh;
+        padding-top: 40px; /* Adiciona um espaço no topo */
+    }
+
+    .welcome-section {
+        padding: 20px;
+        text-align: center; /* Centraliza o texto de boas-vindas */
+    }
+
+    .login-section {
+        /* Remove a linha vertical e adiciona uma linha horizontal no topo */
+        border-left: none;
+        border-top: 1px solid var(--border-color);
+        padding: 40px 20px; /* Ajusta o espaçamento para telas menores */
+        width: 100%; /* Faz a seção de login ocupar a largura toda */
+        box-sizing: border-box; /* Garante que o padding não estoure a largura */
+    }
+
+    .welcome-section h1 {
+        font-size: 2.5rem; /* Diminui um pouco o título */
+    }
+}
+/* Estilos para a grade de conquistas */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 15px;
+    padding-top: 20px;
+}
+
+.achievement-card {
+    background-color: #f8f9fa; /* Um fundo neutro bem claro */
+    border: 2px solid #e9ecef; /* Borda sutil */
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.achievement-card i {
+    margin-bottom: 10px;
+    font-size: 2em;
+    transition: transform 0.3s ease; /* Adiciona uma transição suave para o ícone */
+}
+
+.achievement-card p {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* --- NOVOS ESTILOS DE CONQUISTAS --- */
+
+/* Estilo para conquista NÃO COMPLETADA (bloqueada) */
+.achievement-card.locked {
+    color: #343a40; /* Texto e ícone pretos/cinza escuro */
+    opacity: 0.6; /* Deixa um pouco mais apagado para indicar inatividade */
+}
+
+/* Estilo para conquista COMPLETADA (desbloqueada) */
+.achievement-card.unlocked {
+    color: #0d47a1; /* Azul escuro para o ícone e texto */
+    background-color: #e3f2fd; /* Fundo azul bem claro para destacar */
+    border-color: #0d47a1; /* Borda da mesma cor do texto */
+    transform: translateY(-5px); /* Efeito sutil de elevação */
+    box-shadow: 0 8px 15px rgba(13, 71, 161, 0.15); /* Sombra mais pronunciada */
+}
+
+.achievement-card.unlocked i {
+    transform: scale(1.1); /* Aumenta um pouco o ícone ao desbloquear */
+}
+/* Adicione estas linhas ao seu style.css */
+
+/* CSS CORRIGIDO PARA A ÁREA DE ADICIONAR AMIGOS */
+
+.add-friend-container {
+    background-color: #f8f9fa; /* Um cinza mais claro e suave */
+    padding: 16px;
+    border-radius: 12px;
+    margin-top: 24px;
+    border: 1px solid #e9ecef; /* Borda mais sutil */
+}
+
+.add-friend-container h4 {
+    margin-top: 0;
+    margin-bottom: 4px;
+    font-size: 1rem;
+    color: #343a40;
+}
+
+.add-friend-container p {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.search-wrapper {
+    display: flex;
+    gap: 8px;
+}
+
+/* Estilo para o campo de digitar o nome */
+.search-wrapper input[type="text"] {
+    flex-grow: 1; /* Faz o campo ocupar o máximo de espaço */
+    border: 1px solid #ced4da;
+    border-radius: 8px; /* Bordas mais arredondadas */
+    padding: 12px;
+    font-size: 1rem;
+    color: #495057;
+    background-color: #fff;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Efeito ao focar no campo */
+.search-wrapper input[type="text"]:focus {
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Estilo para o botão "Procurar" */
+.search-wrapper button {
+    border: none;
+    background-color: #0d47a1; /* Azul escuro principal do app */
+    color: white;
+    padding: 0 16px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    flex-shrink: 0; /* Impede que o botão encolha */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.search-wrapper button:hover {
+    background-color: #0b3a82; /* Um tom de azul mais escuro */
+}
+
+/* Estilo para a mensagem de erro */
+#friendSearchResult p.error-message {
+    color: #721c24; /* Vermelho escuro para o texto */
+    background-color: #f8d7da; /* Fundo rosa claro */
+    border: 1px solid #f5c6cb; /* Borda vermelha clara */
+    margin-top: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+/* --- CSS DEFINITIVO PARA A LISTA DE CONFIGURAÇÕES --- */
+
+.settings-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    border-top: 1px solid #e9ecef;
+}
+
+/* Estilo para itens NÃO clicáveis (com toggles) */
+.settings-list .settings-item-static {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 15px; /* Adicionado padding lateral */
+    border-bottom: 1px solid #e9ecef;
+}
+
+/* Estilo ÚNICO para TODOS os itens clicáveis */
+.settings-list .settings-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 18px 15px; /* Adicionado padding lateral */
+    background: none;
+    border: none;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+}
+
+/* A borda agora fica no elemento <li> para garantir consistência */
+.settings-list li {
+     border-bottom: 1px solid #e9ecef;
+}
+.settings-list li:last-child {
+    border-bottom: none;
+}
+
+/* Efeito de hover */
+.settings-list li:hover {
+    background-color: #f8f9fa;
+}
+
+/* Estilo para o texto e o ícone dentro dos itens */
+.settings-action span {
+    font-weight: 500;
+}
+.settings-action i {
+    color: #ced4da;
+}
+
+/* Estilos para o modo escuro */
+html.dark-mode .settings-list,
+html.dark-mode .settings-list li,
+html.dark-mode .settings-list .settings-item-static {
+    border-color: var(--cor-borda);
+}
+html.dark-mode .settings-list li:hover {
+    background-color: var(--cor-fundo-hover);
+}
+/* Estilos para o Toggle Switch */
+.switch { position: relative; display: inline-block; width: 50px; height: 28px; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; }
+.slider.round { border-radius: 34px; }
+.slider:before { position: absolute; content: ""; height: 20px; width: 20px; left: 4px; bottom: 4px; background-color: white; transition: .4s; border-radius: 50%;}
+input:checked + .slider { background-color: #2196F3; }
+input:checked + .slider:before { transform: translateX(22px); }
+
+/* --- ESTILOS PARA A PÁGINA DE EDITAR PERFIL --- */
+.edit-profile-form { padding: 10px 0; }
+.profile-picture-area { display: flex; justify-content: center; margin-bottom: 24px; }
+.profile-picture-placeholder { width: 100px; height: 100px; border-radius: 50%; background-color: #e9ecef; display: flex; align-items: center; justify-content: center; }
+.profile-picture-placeholder i { font-size: 3rem; color: #adb5bd; }
+.edit-profile-form label { display: block; margin-bottom: 8px; font-weight: 500; color: #6c757d; font-size: 0.9rem; }
+.edit-profile-form input[type="text"], .edit-profile-form input[type="email"] { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ced4da; font-size: 1rem; margin-bottom: 16px; }
+.form-link-button { display: block; text-align: right; color: #0d47a1; text-decoration: none; font-weight: bold; margin-top: -10px; margin-bottom: 24px;}
+.form-separator { height: 1px; background-color: #e9ecef; margin: 24px 0; }
+.btn-danger { background-color: #d32f2f; color: white; width: 100%; padding: 15px; border: none; border-radius: 8px; font-size: 1rem; font-weight: bold; cursor: pointer; }
+.btn-primary { background-color: #0d47a1; color: white; width: 100%; padding: 15px; border: none; border-radius: 8px; font-size: 1rem; font-weight: bold; cursor: pointer; }
+/* --- ESTILOS GERAIS PARA O MODO ESCURO --- */
+
+/* A classe .dark-mode será adicionada na tag <html> pelo JavaScript */
+html.dark-mode {
+    --cor-fundo: #121212;
+    --cor-fundo-container: #1e1e1e;
+    --cor-texto-primario: #e0e0e0;
+    --cor-texto-secundario: #a0a0a0;
+    --cor-borda: #333333;
+    --cor-azul-principal: #64b5f6; /* Um azul mais claro para contrastar */
+    --cor-fundo-hover: #2a2a2a;
+}
+
+/* Aplicando as cores do modo escuro */
+html.dark-mode body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-primario);
+}
+
+html.dark-mode .app-container,
+html.dark-mode .login-container .welcome-section,
+html.dark-mode .login-container .login-section {
+    background-color: var(--cor-fundo-container);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+html.dark-mode .header,
+html.dark-mode .settings-item {
+    border-bottom-color: var(--cor-borda);
+}
+
+html.dark-mode .page-title,
+html.dark-mode h2,
+html.dark-mode .friend-name,
+html.dark-mode strong {
+    color: var(--cor-texto-primario);
+}
+
+html.dark-mode .progress-card,
+html.dark-mode .achievement-card,
+html.dark-mode .add-friend-container {
+    background-color: var(--cor-fundo);
+    border-color: var(--cor-borda);
+}
+
+html.dark-mode input[type="text"],
+html.dark-mode input[type="email"],
+html.dark-mode input[type="password"],
+html.dark-mode input[type="number"] {
+    background-color: #2c2c2c;
+    border-color: var(--cor-borda);
+    color: var(--cor-texto-primario);
+}
+
+html.dark-mode .btn-primary,
+html.dark-mode .search-wrapper button {
+    background-color: var(--cor-azul-principal);
+    color: #121212; /* Texto escuro para melhor contraste com o azul claro */
+}
+
+html.dark-mode .btn-danger {
+    background-color: #ef5350; /* Um vermelho que funciona bem no escuro */
+}
+
+html.dark-mode .settings-icon:hover {
+    background-color: var(--cor-fundo-hover);
+}
+
+html.dark-mode .achievement-card.locked {
+    background-color: #2a2a2a;
+    color: #666;
+    filter: grayscale(90%);
+}
+
+html.dark-mode .achievement-card.unlocked {
+    color: var(--cor-azul-principal);
+    background-color: #121212;
+    border-color: var(--cor-azul-principal);
+}
+/* --- ESTILOS PARA FOTO DE PERFIL E MODAL --- */
+
+/* Deixa a área da foto clicável */
+.profile-picture-label {
+    cursor: pointer;
+    display: block;
+    margin-bottom: 24px;
+}
+.profile-picture-area {
+    position: relative; /* Necessário para o ícone de câmera por cima */
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+}
+#profilePicPreview {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
+    border: 3px solid #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.profile-picture-overlay {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(13, 71, 161, 0.8);
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    transition: transform 0.2s ease;
+}
+.profile-picture-label:hover .profile-picture-overlay {
+    transform: scale(1.1);
+}
+
+/* --- CSS DEFINITIVO PARA O MODAL DE SENHA --- */
+
+/* O container do modal (fundo escuro) */
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Começa invisível e com transição suave */
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Classe que o JavaScript vai adicionar para mostrar o modal */
+.modal.is-visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* O conteúdo da caixa do modal */
+.modal-content {
+    background-color: #ffffff;
+    padding: 25px 30px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 420px;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.modal.is-visible .modal-content {
+    transform: scale(1); /* Efeito de "zoom" ao aparecer */
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+.close-button:hover {
+    color: #333;
+}
+.modal-content h3 { margin-top: 0; margin-bottom: 20px; font-size: 1.5rem; color: #343a40; }
+.modal-content label { display: block; margin-top: 15px; margin-bottom: 8px; font-weight: 500; color: #6c757d; font-size: 0.9rem; }
+.modal-content input[type="password"] { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ced4da; font-size: 1rem; }
+.modal-content input[type="password"]:focus { outline: none; border-color: #80bdff; box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
+.modal-content button { margin-top: 25px; width: 100%; }
+/* --- CSS PARA O MODAL DE SENHA E BOTÃO 'GHOST' --- */
+
+/* Estilo para o botão 'Alterar Senha' */
+.centered-action {
+    text-align: center;
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+.ghost-button {
+    background-color: transparent;
+    border: 2px solid #0d47a1;
+    color: #0d47a1;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.ghost-button:hover {
+    background-color: #0d47a1;
+    color: white;
+}
+
+/* Estilo para o Modal de Senha */
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.modal.is-visible {
+    visibility: visible;
+    opacity: 1;
+}
+.modal-content {
+    background-color: #ffffff;
+    padding: 25px 30px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 420px;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+.modal.is-visible .modal-content {
+    transform: scale(1);
+}
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+.close-button:hover {
+    color: #333;
+}
+.modal-content h3 { margin-top: 0; margin-bottom: 20px; font-size: 1.5rem; color: #343a40; }
+.modal-content label { display: block; margin-top: 15px; margin-bottom: 8px; font-weight: 500; color: #6c757d; font-size: 0.9rem; }
+.modal-content input[type="password"] { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ced4da; font-size: 1rem; }
+.modal-content input[type="password"]:focus { outline: none; border-color: #80bdff; box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
+.modal-content button { margin-top: 25px; width: 100%; }

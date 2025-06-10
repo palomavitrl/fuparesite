@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Senha</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Página</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        // Verifica no localStorage se o modo escuro estava ativo
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            // Se sim, adiciona a classe 'dark-mode' na tag <html> ANTES da página carregar
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="recovery-container">
+        <h2>Recuperar senha</h2>
+        <p>Digite seu e-mail abaixo para redefinir sua senha. Enviaremos um link de recuperação caso o e-mail esteja cadastrado em nossa aplicação.</p>
+        <form id="recoveryForm">
+            <label for="email-recuperacao">E-mail</label>
+            <input type="email" id="email-recuperacao" required>
+            <button type="submit" class="btn-primary">ENVIAR</button>
+            <a href="index.html" class="back-to-login">Lembrar a senha</a>
+        </form>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

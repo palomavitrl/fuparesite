@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conquistas</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Link para os ícones do Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body class="app-background-light">
+    <div class="app-container">
+        <div class="header">
+            <a href="progresso.html" class="back-arrow">&lt;</a>
+            <h1 class="page-title">Conquistas <i class="fa-solid fa-trophy" style="font-size: 1.8rem;"></i></h1>
+            <a href="comunidade.html" class="forward-arrow">&gt;</a>
+        </div>
+
+        <!-- O grid agora contém todas as conquistas, que serão ativadas pelo JS -->
+        <div class="achievements-grid">
+            <!-- Conquistas de Tempo -->
+            <div class="achievement-card" id="conquista-dias-1">
+                <i class="fa-solid fa-circle-stop fa-2x"></i><p>1 dia sem fumar</p>
+            </div>
+            <div class="achievement-card" id="conquista-dias-3">
+                <i class="fa-solid fa-shield-halved fa-2x"></i><p>3 dias sem fumar</p>
+            </div>
+            <div class="achievement-card" id="conquista-dias-7">
+                <i class="fa-solid fa-calendar-week fa-2x"></i><p>1 semana de liberdade</p>
+            </div>
+             <div class="achievement-card" id="conquista-dias-14">
+                <i class="fa-solid fa-calendar-check fa-2x"></i><p>2 semanas vitoriosas</p>
+            </div>
+            <div class="achievement-card" id="conquista-dias-30">
+                <i class="fa-solid fa-award fa-2x"></i><p>1 mês completo!</p>
+            </div>
+             <div class="achievement-card" id="conquista-dias-90">
+                <i class="fa-solid fa-medal fa-2x"></i><p>3 meses de progresso</p>
+            </div>
+            <div class="achievement-card" id="conquista-dias-182">
+                <i class="fa-solid fa-sun fa-2x"></i><p>Meio ano sem cigarro</p>
+            </div>
+            <div class="achievement-card" id="conquista-dias-365">
+                <i class="fa-solid fa-crown fa-2x"></i><p>Parabéns! 1 ano!</p>
+            </div>
+
+            <!-- Conquistas de Cigarros Evitados -->
+            <div class="achievement-card" id="conquista-cigarros-10">
+                <i class="fa-solid fa-ban-smoking fa-2x"></i><p>10 cigarros evitados</p>
+            </div>
+            <div class="achievement-card" id="conquista-cigarros-20">
+                <i class="fa-solid fa-box fa-2x"></i><p>1 maço inteiro evitado</p>
+            </div>
+            <div class="achievement-card" id="conquista-cigarros-50">
+                <i class="fa-solid fa-seedling fa-2x"></i><p>50 cigarros a menos</p>
+            </div>
+            <div class="achievement-card" id="conquista-cigarros-100">
+                <i class="fa-solid fa-star fa-2x"></i><p>100 cigarros evitados</p>
+            </div>
+            <div class="achievement-card" id="conquista-cigarros-500">
+                <i class="fa-solid fa-tree fa-2x"></i><p>500 cigarros! Uau!</p>
+            </div>
+             <div class="achievement-card" id="conquista-cigarros-1000">
+                <i class="fa-solid fa-mountain fa-2x"></i><p>Mil cigarros evitados!</p>
+            </div>
+
+            <!-- Conquistas de Dinheiro -->
+            <div class="achievement-card" id="conquista-dinheiro-10">
+                 <i class="fa-solid fa-money-bill-wave fa-2x"></i><p>R$ 10 economizados</p>
+            </div>
+             <div class="achievement-card" id="conquista-dinheiro-50">
+                <i class="fa-solid fa-piggy-bank fa-2x"></i><p>R$ 50 no cofrinho</p>
+            </div>
+            <div class="achievement-card" id="conquista-dinheiro-100">
+                <i class="fa-solid fa-sack-dollar fa-2x"></i><p>R$ 100 economizados</p>
+            </div>
+            <div class="achievement-card" id="conquista-dinheiro-500">
+                <i class="fa-solid fa-gem fa-2x"></i><p>R$ 500 para você!</p>
+            </div>
+
+            <!-- Conquistas de Saúde -->
+            <div class="achievement-card" id="conquista-saude-pulmao">
+                <i class="fa-solid fa-lungs fa-2x"></i><p>Pulmões mais limpos</p>
+            </div>
+             <div class="achievement-card" id="conquista-saude-paladar">
+                <i class="fa-solid fa-utensils fa-2x"></i><p>Paladar e olfato melhores</p>
+            </div>
+             <div class="achievement-card" id="conquista-saude-energia">
+                <i class="fa-solid fa-person-running fa-2x"></i><p>Mais energia no dia a dia</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script específico para a página de conquistas -->
+    <script src="conquistas.js" defer></script>
+</body>
+</html>

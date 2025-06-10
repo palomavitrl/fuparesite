@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progresso Geral</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        // Script Anti-Flash para o Modo Escuro
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body class="app-background-light page-progresso"> 
+    <div class="app-container">
+        
+        <div class="header">
+            <a href="configuracoes.html" class="header-icon">
+                <i class="fa-solid fa-gear"></i>
+            </a>
+            
+            <h1 class="page-title">Progresso Geral</h1>
+            
+            <a href="conquistas.html" class="forward-arrow">&gt;</a>
+</a>
+        </div>
+
+        <div class="progress-card">
+            <h3>Cigarros Evitados</h3>
+            <p><strong>Total: </strong><span id="cigarros-evitados-total">0</span></p>
+            <p><strong>Por semana: </strong><span id="cigarros-evitados-semana">0</span></p>
+            <p><strong>Por mês: </strong><span id="cigarros-evitados-mes">0</span></p>
+        </div>
+        <div class="progress-card">
+            <h3>Dinheiro Economizado</h3>
+            <p><strong>Total: </strong><span id="dinheiro-economizado-total">R$ 0,00</span></p>
+            <p><strong>Por semana: </strong><span id="dinheiro-economizado-semana">0</span></p>
+            <p><strong>Por mês: </strong><span id="dinheiro-economizado-mes">0</span></p>
+        </div>
+        <div class="progress-card">
+            <h3>Tempo de Vida Recuperado</h3>
+            <p><strong>Total: </strong><span id="tempo-recuperado-total">0 dias</span></p>
+            <p><strong>Por semana: </strong><span id="tempo-recuperado-semana">0 dias</span></p>
+            <p><strong>Por mês: </strong><span id="tempo-recuperado-mes">0 dias</span></p>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>

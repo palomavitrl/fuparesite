@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body class="app-background-light page-configuracoes">
+    <div class="app-container">
+        <div class="header">
+            <a href="progresso.html" class="back-arrow">&lt;</a>
+            <h1 class="page-title">Configurações</h1>
+            <span class="settings-icon" aria-hidden="true"></span>
+        </div>
+
+        <ul class="settings-list">
+            <li class="settings-item-static">
+                <span>Modo escuro</span>
+                <label class="switch">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="slider round"></span>
+                </label>
+            </li>
+            <li class="settings-item-static">
+                <span>Notificações</span>
+                <label class="switch">
+                    <input type="checkbox" id="notificationsToggle" checked>
+                    <span class="slider round"></span>
+                </label>
+            </li>
+
+            <li>
+                <a href="editar-perfil.html" class="settings-action">
+                    <span>Conta</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" id="privacyBtn" class="settings-action">
+                    <span>Privacidade</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </li>
+             <li>
+                <a href="#" id="helpBtn" class="settings-action">
+                    <span>Ajuda</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                 </a>
+            </li>
+             <li>
+                <a href="#" id="aboutBtn" class="settings-action">
+                    <span>Sobre</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="privacyModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>Privacidade</h3>
+            <div class="modal-text">
+                <p>Na Fupare, sua privacidade é prioridade. Coletamos apenas informações essenciais, como nome e e-mail, para oferecer uma experiência personalizada e segura.</p>
+                <p>Seus dados jamais serão vendidos ou compartilhados com terceiros sem sua autorização. Utilizamos cookies apenas para melhorar a navegação.</p>
+                <p>Você pode entrar em contato conosco a qualquer momento para revisar ou excluir suas informações pessoais.</p>
+                <p>Em caso de dúvidas, envie um e-mail para: <strong>contato@fupare.com</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="helpModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>Ajuda</h3>
+            <div class="modal-text">
+                <p>Precisa de ajuda para usar a Fupare? Estamos aqui por você.</p>
+                <p><strong>Perguntas frequentes:</strong></p>
+                <ul class="faq-list">
+                    <li>Como faço para criar uma conta?</li>
+                    <li>O que acontece quando inicio um plano de apoio?</li>
+                    <li>É gratuito usar o site?</li>
+                    <li>Como posso falar com um voluntário ou especialista?</li>
+                </ul>
+                <p>Se você ainda tiver dúvidas ou quiser conversar com alguém da equipe, envie um e-mail para: <strong>contato@fupare.com</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>Sobre a Fupare</h3>
+            <div class="modal-text">
+                <p>A Fupare nasceu com um propósito: ajudar pessoas que desejam se libertar do vício em cigarro.</p>
+                <p>Sabemos que parar de fumar não é fácil — envolve hábitos, emoções e desafios diários. Por isso, criamos uma plataforma de apoio com ferramentas práticas, conteúdo informativo e suporte humano.</p>
+                <p>Se você está nessa jornada ou quer apoiar alguém que está, a Fupare é o seu espaço seguro para recomeçar.</p>
+                <p>Juntos, somos mais fortes.</p>
+                <p><strong>💙 Fupare — você não está sozinho.</strong></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js" defer></script>
+</body>
+</html>

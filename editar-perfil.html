@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body class="app-background-light page-editar-perfil">
+    <div class="app-container">
+        <div class="header">
+            <a href="configuracoes.html" class="back-arrow">&lt;</a>
+            <h1 class="page-title">Editar Perfil</h1>
+            <span class="settings-icon" aria-hidden="true"></span>
+        </div>
+
+        <form id="editProfileForm" class="edit-profile-form">
+            <label for="profilePicInput" class="profile-picture-label">
+                <div class="profile-picture-area">
+                    <img id="profilePicPreview" src="https://www.pngall.com/wp-content/uploads/5/Profile.png" alt="Foto do Perfil">
+                    <div class="profile-picture-overlay"><i class="fa-solid fa-camera"></i></div>
+                </div>
+            </label>
+            <input type="file" id="profilePicInput" accept="image/*" style="display: none;">
+            
+            <label for="editNome">Nome</label>
+            <input type="text" id="editNome" required>
+            
+            <label for="editEmail">E-mail</label>
+            <input type="email" id="editEmail" required>
+
+            <div class="centered-action">
+                <button type="button" id="changePasswordBtn" class="ghost-button">Alterar senha</button>
+            </div>
+            
+            <button type="submit" class="btn-primary">SALVAR ALTERAÇÕES</button>
+        </form>
+
+        <div class="form-separator"></div>
+
+        <button type="button" id="deleteProfileBtn" class="btn-danger">DELETAR PERFIL</button>
+    </div>
+
+    <div id="passwordModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModalBtn" class="close-button">&times;</span>
+            <h3>Alterar Senha</h3>
+            <form id="passwordChangeForm">
+                <label for="currentPassword">Senha Atual</label>
+                <input type="password" id="currentPassword" placeholder="••••••••">
+                <label for="newPassword">Nova Senha</label>
+                <input type="password" id="newPassword" placeholder="••••••••">
+                <label for="confirmNewPassword">Confirmar Nova Senha</label>
+                <input type="password" id="confirmNewPassword" placeholder="••••••••">
+                <button type="submit" class="btn-primary">SALVAR NOVA SENHA</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="editar-perfil.js" defer></script>
+</body>
+</html>
