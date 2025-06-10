@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conquistas</title>
     <link rel="stylesheet" href="style.css">
+     <script>
+        // Verifica no localStorage se o modo escuro estava ativo
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            // Se sim, adiciona a classe 'dark-mode' na tag <html> ANTES da página carregar
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    
     <!-- Link para os ícones do Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
